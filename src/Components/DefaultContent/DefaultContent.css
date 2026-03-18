@@ -1,0 +1,38 @@
+.default-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center vertically */
+  align-items: center; /* Center horizontally */
+  height: 100vh; /* Take full height of the viewport */
+  margin-left: 150px; /* Match the width of the sidebar */
+  padding: 20px; /* Add some padding */
+  text-align: center; /* Center text */
+}
+
+.default-content h1 {
+  font-size: 3rem;
+  color: #333;
+}
+
+.default-content p {
+  font-size: 1.5rem;
+  color: #666;
+}
+
+/* Media query for mobile devices */
+@media screen and (max-width: 768px) {
+  .default-content {
+    margin-left: 0; /* Remove the sidebar margin on mobile */
+    padding: 20px 10px; /* Adjust padding for smaller screens */
+    height: auto; /* Allow content to determine height */
+    min-height: 80vh; /* Ensure it still takes up most of the screen */
+  }
+  
+  .default-content h1 {
+    font-size: 2rem; /* Smaller font size for mobile */
+  }
+  
+  .default-content p {
+    font-size: 1.2rem; /* Smaller font size for mobile */
+  }
+}

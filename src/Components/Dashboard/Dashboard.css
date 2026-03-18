@@ -1,0 +1,332 @@
+/* Dashboard.css */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+body {
+  background-color: #f8f4ec;
+  color: #2c2c2c;
+  overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+.main-container {
+  display: flex;
+}
+
+.dash-container {
+  width: 250px;
+  height: 100vh;
+  background: linear-gradient(135deg, #e6b84c 0%, #c69c3c 100%);
+  padding: 25px;
+  box-shadow: 4px 0 15px rgba(0, 0, 0, 0.12);
+  position: fixed;
+  left: 0;
+  top: 0;
+  overflow-y: auto;
+  transition: transform 0.3s ease;
+  z-index: 1000;
+}
+
+.top-contain {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+}
+
+.top-contain img {
+  width: 60px;
+  border-radius: 10px; /* Reduced border radius for more professional look */
+  margin-bottom: 10px;
+  border: 2px solid rgba(255, 255, 255, 0.95);
+  background-color: rgba(255, 255, 255, 0.95);
+  transition: all 0.3s ease;
+  background-size: contain;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15); /* Subtle shadow for depth */
+  object-fit: contain; /* Ensures image maintains aspect ratio */
+  padding: 4px; /* Small padding around logo */
+}
+
+
+.top-contain img:hover {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  transform: scale(1.05);
+}
+
+.top-contain h2 {
+  color: #ffffff;
+  font-size: 22px;
+  font-weight: 600;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  letter-spacing: 0.5px;
+  margin: 0;
+}
+
+hr {
+  width: 90%;
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  margin: 25px 0;
+  background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.7), transparent);
+}
+
+.modules-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+}
+
+.module {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(145deg, #fff3d4 0%, #fce5b3 100%);
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid rgba(190, 144, 75, 0.6);
+  width: 90px;
+  height: 90px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  transition: all 0.4s ease;
+}
+
+.module:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.module i {
+  font-size: 26px;
+  color: #c49b3d;
+  filter: drop-shadow(1px 1px 2px rgba(0, 0, 0, 0.2));
+}
+
+.module a {
+  margin-top: 6px;
+  text-decoration: none;
+  color: #815c2e;
+  font-weight: 600;
+  font-size: 15px;
+  letter-spacing: 0.3px;
+  transition: color 0.3s ease;
+}
+
+.module a:hover {
+  color: #9b6b35;
+}
+
+.content {
+  margin-left: 290px;
+  padding: 50px;
+  background-color: #f8f4ec;
+  width: calc(100% - 290px);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow-x: hidden;
+  transition: margin-left 0.3s ease;
+}
+
+.content h1 {
+  color: #6b4c3a;
+  font-size: 38px;
+  margin-bottom: 25px;
+  text-align: center;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.content p {
+  color: #9b6b35;
+  font-size: 19px;
+  text-align: center;
+  max-width: 650px;
+  line-height: 1.6;
+  font-weight: 400;
+}
+
+.tag {
+  color: rgba(0, 0, 0, 0.65);
+  font-weight: bolder;
+  padding-left: 10px;
+}
+
+.name {
+  color: rgba(255, 255, 255, 0.8);
+  font-weight: bolder;
+  padding-left: 50px;
+}
+
+/* Mobile menu toggle button */
+.menu-toggle {
+  display: none;
+  position: fixed;
+  top: 15px;
+  right: 15px;
+  z-index: 2000;
+  background-color: #e6b84c;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.menu-toggle i {
+  font-size: 24px;
+}
+
+/* Add hamburger icon */
+.hamburger {
+  width: 24px;
+  height: 3px;
+  background-color: white;
+  position: relative;
+  transition: background-color 0.3s;
+}
+
+.hamburger:before,
+.hamburger:after {
+  content: '';
+  width: 24px;
+  height: 3px;
+  background-color: white;
+  position: absolute;
+  transition: transform 0.3s;
+}
+
+.hamburger:before {
+  top: -7px;
+}
+
+.hamburger:after {
+  bottom: -7px;
+}
+
+/* Mobile responsive overrides */
+@media (max-width: 992px) {
+  .dash-container {
+    width: 220px;
+  }
+  
+  .content {
+    margin-left: 220px;
+    width: calc(100% - 220px);
+    padding: 30px;
+  }
+  
+  .module {
+    width: 80px;
+    height: 80px;
+  }
+  
+  .top-contain h2 {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: flex;
+  }
+  
+  .dash-container {
+    transform: translateX(-100%);
+    width: 240px;
+    z-index: 2001; /* Higher z-index to ensure it appears above all content */
+    visibility: hidden; /* Hide by default but keep layout */
+    opacity: 0; /* Start with transparent state */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); /* Stronger shadow for better visibility */
+  }
+  
+  .dash-container.active {
+    transform: translateX(0);
+    visibility: visible; /* Show when active */
+    opacity: 1; /* Fully opaque when active */
+  }
+  
+  /* Change hamburger to X when menu is active */
+  .menu-toggle.active .hamburger {
+    background-color: transparent; /* Hide the middle line */
+  }
+  
+  .menu-toggle.active .hamburger:before {
+    transform: rotate(45deg) translate(5px, 5px); /* Create the X shape */
+  }
+  
+  .menu-toggle.active .hamburger:after {
+    transform: rotate(-45deg) translate(5px, -5px); /* Create the X shape */
+  }
+  
+  .content {
+    margin-left: 0;
+    width: 100%;
+    padding: 20px;
+  }
+  
+  .top-contain h2 {
+    font-size: 16px;
+  }
+  
+  .module {
+    width: 70px;
+    height: 70px;
+  }
+  
+  .module i {
+    font-size: 22px;
+  }
+  
+  .module a {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .content {
+    padding: 15px 10px;
+  }
+  
+  .content h1 {
+    font-size: 28px;
+  }
+  
+  .content p {
+    font-size: 16px;
+  }
+  
+  .name, .tag {
+    padding-left: 10px;
+    font-size: 12px;
+  }
+  
+  .modules-container {
+    gap: 15px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .dash-container {
+    width: 300px;
+  }
+
+  .content {
+    margin-left: 300px;
+    width: calc(100% - 300px);
+  }
+}

@@ -1,0 +1,89 @@
+/* Accounts Container */
+.accounts-container {
+  padding: 20px;
+  margin-left: 250px; /* Match the width of the sidebar */
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Space between elements */
+}
+
+/* Heading */
+.accounts-container h1 {
+  font-size: 2.5rem;
+  color: #d4af37; /* Golden color for the heading */
+  margin-bottom: 20px;
+}
+
+/* Cards Container */
+.cards-container {
+  display: flex;
+  gap: 20px; /* Space between cards */
+  flex-wrap: wrap; /* Allow cards to wrap to the next line */
+}
+
+/* Individual Card */
+.card {
+  background-color: #fff;
+  border: 1px solid #d4af37; /* Golden border */
+  border-radius: 8px;
+  padding: 20px;
+  width: 250px; /* Fixed width for each card */
+  box-shadow: 0 4px 8px rgba(212, 175, 55, 0.2); /* Golden shadow */
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px); /* Lift the card on hover */
+  box-shadow: 0 8px 16px rgba(212, 175, 55, 0.3); /* Stronger golden shadow on hover */
+}
+
+/* Card Title */
+.card h2 {
+  font-size: 1.5rem;
+  color: #d4af37; /* Golden color for the title */
+  margin-bottom: 10px;
+}
+
+/* Card Description */
+.card p {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 15px;
+}
+
+/* Card Link */
+.card-link {
+  text-decoration: none;
+  color: #fff;
+  background-color: #d4af37; /* Golden background for the button */
+  padding: 10px 15px;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  transition: background-color 0.2s ease;
+}
+
+.card-link:hover {
+  background-color: #b5942e; /* Darker golden color on hover */
+}
+
+/* Media query for mobile devices */
+@media screen and (max-width: 768px) {
+  .accounts-container {
+    margin-left: 0; /* Remove sidebar margin on mobile */
+    padding: 15px; /* Reduce padding for smaller screens */
+  }
+  
+  .accounts-container h1 {
+    font-size: 2rem; /* Smaller heading on mobile */
+    text-align: center; /* Center heading on mobile */
+  }
+  
+  .cards-container {
+    justify-content: center; /* Center cards on mobile */
+  }
+  
+  .card {
+    width: 90%; /* Make cards responsive */
+    max-width: 300px; /* Limit max width */
+  }
+}

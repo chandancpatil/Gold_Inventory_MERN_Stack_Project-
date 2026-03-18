@@ -1,0 +1,180 @@
+/* GoldRates.css - Complete Styles */
+.gold-rates-container {
+  margin-left: 350px;
+  padding: 2rem;
+  min-height: 900px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2rem;
+}
+
+/* Client Stats Box Styles */
+.client-stats-box {
+  width: 100%;
+  max-width: 600px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+}
+
+.client-stats-box h2 {
+  color: #2c3e50;
+  font-size: 1.4rem;
+  margin: 0 0 1.5rem 0;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid #eee;
+}
+
+.stats-container {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.stat-item {
+  flex: 1;
+  background: #f8f9fa;
+  padding: 1.25rem;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.stat-label {
+  display: block;
+  color: #7f8c8d;
+  font-size: 0.95rem;
+  margin-bottom: 0.75rem;
+  font-weight: 500;
+}
+
+.stat-value {
+  display: block;
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: #2c3e50;
+}
+
+/* Gold Rates Card Styles */
+.gold-rates-card {
+  width: 100%;
+  max-width: 600px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.card-header {
+  padding: 1.5rem;
+  background-color: #2c3e50;
+  color: white;
+  font-size: 1.4rem;
+  font-weight: 600;
+  border-radius: 10px 10px 0 0;
+}
+
+.card-body {
+  padding: 2rem;
+}
+
+.gold-rates-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.rate-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.rate-group label {
+  font-weight: 500;
+  color: #495057;
+  font-size: 1rem;
+}
+
+.input-group {
+  display: flex;
+}
+
+.input-group input {
+  flex: 1;
+  padding: 0.9rem 1rem;
+  border: 1px solid #ddd;
+  border-radius: 6px 0 0 6px;
+  font-size: 1rem;
+  transition: border-color 0.3s;
+}
+
+.input-group input:focus {
+  outline: none;
+  border-color: #3498db;
+  box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.1);
+}
+
+.input-unit {
+  padding: 0.9rem 1rem;
+  background-color: #f8f9fa;
+  border: 1px solid #ddd;
+  border-left: none;
+  border-radius: 0 6px 6px 0;
+  color: #495057;
+}
+
+.submit-btn3 {
+  padding: 0.9rem 1.5rem;
+  background-color: #2c3e50;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-top: 0.5rem;
+}
+
+.submit-btn:hover {
+  background-color: #1a252f;
+}
+
+.form-note {
+  margin-top: 1.5rem;
+  color: #7f8c8d;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+  .gold-rates-container {
+    margin-left: 0;
+    padding: 1.5rem;
+    align-items: center;
+    min-height: auto;
+  }
+
+  .client-stats-box,
+  .gold-rates-card {
+    max-width: 100%;
+  }
+
+  .stats-container {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .card-body {
+    padding: 1.5rem;
+  }
+  
+  .input-group input,
+  .input-unit {
+    padding: 0.8rem;
+  }
+}

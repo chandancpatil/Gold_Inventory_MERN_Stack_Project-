@@ -1,0 +1,142 @@
+/* Home Container */
+.home-container {
+  padding: 20px;
+  margin-left: 250px; /* Add margin to match other pages */
+  min-height: 100vh; /* Full viewport height */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Align content to the start (left) */
+  width: calc(100% - 250px); /* Adjust width to account for margin */
+  transition: all 0.3s ease;
+}
+
+/* Heading */
+.home-container h1 {
+  font-size: 2.5rem;
+  color: #d4af37; /* Golden color for the heading */
+  margin-bottom: 20px;
+}
+
+/* Cards Container */
+.cards-container {
+  display: flex;
+  flex-wrap: wrap; /* Allow cards to wrap to the next line */
+  gap: 20px; /* Space between cards */
+  width: 100%;
+  justify-content: flex-start;
+}
+
+/* Individual Card */
+.card {
+  background-color: #fff;
+  border: 1px solid #d4af37; /* Golden border */
+  border-radius: 8px;
+  padding: 20px;
+  width: calc(33.33% - 20px); /* Three cards per row by default */
+  box-shadow: 0 4px 8px rgba(212, 175, 55, 0.2); /* Golden shadow */
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px); /* Lift the card on hover */
+  box-shadow: 0 8px 16px rgba(212, 175, 55, 0.3); /* Stronger golden shadow on hover */
+}
+
+/* Card Title */
+.card h2 {
+  font-size: 1.5rem;
+  color: #d4af37; /* Golden color for the title */
+  margin-bottom: 10px;
+}
+
+/* Card Description */
+.card p {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 15px;
+}
+
+/* Card Link */
+.card-link {
+  text-decoration: none;
+  color: #fff;
+  background-color: #d4af37; /* Golden background for the button */
+  padding: 10px 15px;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  transition: background-color 0.2s ease;
+  display: inline-block;
+}
+
+.card-link:hover {
+  background-color: #b5942e; /* Darker golden color on hover */
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+  .card {
+    width: calc(50% - 20px); /* Two cards per row */
+  }
+  
+  .home-container h1 {
+    font-size: 2.2rem;
+  }
+}
+
+@media (max-width: 900px) {
+  .home-container {
+    padding: 15px;
+  }
+  
+  .cards-container {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .home-container {
+    margin-left: 0; /* Remove margin on mobile */
+    width: 100%; /* Full width on mobile */
+    padding: 15px;
+  }
+  
+  .home-container h1 {
+    font-size: 2rem;
+    text-align: center;
+    width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .card {
+    width: 100%; /* Single column on smallest screens */
+  }
+  
+  .home-container {
+    padding: 10px;
+  }
+  
+  .home-container h1 {
+    font-size: 1.8rem;
+  }
+  
+  .card h2 {
+    font-size: 1.3rem;
+  }
+  
+  .card p {
+    font-size: 0.9rem;
+  }
+}
+
+/* Touch device optimizations */
+@media (hover: none) {
+  .card {
+    /* Don't wait for hover on touch devices */
+    box-shadow: 0 6px 12px rgba(212, 175, 55, 0.25);
+  }
+  
+  .card-link {
+    padding: 12px 20px; /* Larger touch target */
+  }
+}

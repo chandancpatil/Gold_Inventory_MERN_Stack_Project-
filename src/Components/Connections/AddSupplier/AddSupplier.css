@@ -1,0 +1,122 @@
+/* AddSupplier.css */
+.supplier-container {
+  margin-left: 350px;
+  padding: 2rem;
+  min-height: 100vh;
+
+  display: flex;
+  justify-content: flex-start;
+}
+
+.supplier-card {
+  width: 100%;
+  max-width: 800px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.card-header {
+  padding: 1.5rem;
+  background-color: #2c3e50;
+  color: white;
+  font-size: 1.4rem;
+  font-weight: 600;
+  border-radius: 10px 10px 0 0;
+}
+
+.card-header h2 {
+  margin: 0;
+}
+
+.card-body {
+  padding: 2rem;
+}
+
+.supplier-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-group label {
+  font-weight: 500;
+  color: #495057;
+  font-size: 1rem;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+  padding: 0.9rem 1rem;
+  border: 1px solid #ced4da;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: border-color 0.3s;
+}
+
+.form-group textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: #3498db;
+  box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.1);
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+}
+
+.submit-btn6 {
+  padding: 0.9rem 1.5rem;
+  background-color: #000000;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-top: 1rem;
+}
+
+.submit-btn:hover {
+  background-color: #1a252f;
+}
+
+.form-note {
+  margin-top: 1.5rem;
+  color: #7f8c8d;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+  .supplier-container {
+      margin-left: 0;
+      padding: 1.5rem;
+      justify-content: center;
+  }
+  
+  .supplier-card {
+      max-width: 100%;
+  }
+  
+  .form-row {
+      grid-template-columns: 1fr;
+  }
+}
